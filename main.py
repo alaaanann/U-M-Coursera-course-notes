@@ -74,3 +74,99 @@ print(s[8:])
 # thon
 print(s[:])
 # Monty python
+
+#sting manipulating 
+# if we want a space betwen sting when we use the + operator we add " "
+# + when it is added to strings it means ' concatenation ' it concationate the stiring with no space
+# in is like == if like
+'n' in fruit 
+'m' in fruit
+'nan' in fruit
+#her in is ask if nan is in fruit and fruit is bannana means it ask if nan is in bannana the answer is either true of False
+
+if word == 'bannana':
+  print('all right, bannana')
+if word < 'bannana':
+  print('your word,' + word + ", comes after bannana")
+elif word > 'bannana':
+  print('your word,' + word + ", comes after bannana")
+else:
+  print('all right, bannana')
+  
+# all right bannana
+
+# == compares character for character \ upper case letter is < small case letter 
+great = 'HELLO Bob'
+zap = great.lower()
+#here it say to make a copy of great that is lower case and it don't change the original that is great
+print(zap)
+#hello bob
+print('Hi There'.lower())
+# hi there 
+# lower is a build in 'OBJECT METHOD' THIS THING IS A METHOD
+
+# THIS IS A THING THAT IS OF A CATAGORY STING = class
+# TYPE GIVE THAT TYPE OF DATA U INTER 
+#DIR GIVES THE STUFF U CAN DO WITH THE TYPE OF DATA U ENTERED 'WHAT IS THE DATA CAPPABLE OF ' = IT IS METHOD IN THE CLASS 
+""" 
+
+SOME OF THE STING LYBRARY
+str.capotalize() --> make the string capital
+str.center(width[, fillchar]
+str,endswith(suffix[, star[, end]])
+str.find(sub[, start[, end]] --> looks for stuff in the string 
+str.lstrip([chars])
+str.replace(old, new[, count]) 
+str,lower()
+str.rstrip([chars])
+str.strip([chars])
+str.upper()
+
+"""
+pos = fruit.find('na')
+print(pos)
+##2
+# it will find the letter and give me where it is located in numbers
+aa = fruit.find('z')
+print(aa)
+##-1 cause it is not there in the string 
+
+greet = 'Hello Bob'
+nstr = greet.replace('Bob', 'Jane')
+# here it says replace Jane with Bob and if there is more thab 1 bob it will replace all of them with jane
+print(nstr)
+## Hello Jane 
+
+greeet - '   Hello bob'
+greeet.lstrip()# --> STRIP SPACE FROM LEFT SIDE 
+## 'Hello bob   '
+greeet.rstrip()
+## '   Hello bob' # --> STRIP SPACE FROM RIGHT SIDE 
+greeet.strip() # --> REMOVE THE SPACES FROM RIGHT AND LEFT
+## 'Hello bob'
+
+# THE ORIGINAL STRING WILL STARY IT WILL MAKE  A NEW COPY AND APPLY THE CHANGES ON IT 
+
+line = 'Please have a nice day'
+lne.startswith('Please')
+## true
+line.startswith('p')
+## False
+# her we can check it the string starts with like we can use it in if statement like to say if the sting that start with something : do with it this and so on
+
+data = 'From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008'
+atops = data.find('@')
+print(atpos)
+## 21
+sppos = data.find(' ', atops)
+# her we write the 'atops' to tell python to start searching from the @ character
+print(sppos)
+## 31
+host = data[atpos+1 : sppos]
+# we say one beyond the @ which is 'u' to the space posision but not including it which is the 'a'
+print(host)
+##uct.ac.za
+
+
+
+
