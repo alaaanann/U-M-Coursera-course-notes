@@ -137,7 +137,7 @@ nstr = greet.replace('Bob', 'Jane')
 print(nstr)
 ## Hello Jane 
 
-greeet - '   Hello bob'
+greeet = '   Hello bob'
 greeet.lstrip()# --> STRIP SPACE FROM LEFT SIDE 
 ## 'Hello bob   '
 greeet.rstrip()
@@ -148,7 +148,7 @@ greeet.strip() # --> REMOVE THE SPACES FROM RIGHT AND LEFT
 # THE ORIGINAL STRING WILL STARY IT WILL MAKE  A NEW COPY AND APPLY THE CHANGES ON IT 
 
 line = 'Please have a nice day'
-lne.startswith('Please')
+line.startswith('Please')
 ## true
 line.startswith('p')
 ## False
@@ -156,17 +156,70 @@ line.startswith('p')
 
 data = 'From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008'
 atops = data.find('@')
-print(atpos)
+print(atops)
 ## 21
 sppos = data.find(' ', atops)
 # her we write the 'atops' to tell python to start searching from the @ character
 print(sppos)
 ## 31
-host = data[atpos+1 : sppos]
+host = data[atops+1 : sppos]
 # we say one beyond the @ which is 'u' to the space posision but not including it which is the 'a'
 print(host)
 ##uct.ac.za
 
 
 
+#FILES WE WILL BE PLAYING WITH inbox.TXT FILES 
+# this is just a flat text file that python is able to read 
+#first before we use a file we tell python that we r going to use it by useing open
 
+"""
+handle = open(filename, mode ) --> fhand = open('mbox.txt', 'r') -- her we told python the name of the
+file and told him that we r only going to read it cause we use 'r'  her it give handle it isn't the data but someting that we can manipulate it is like a port between the program and the file that is open 
+we can read or write  it is telling us something but it is not that actual file 
+if we try to open a file that doesn't work or exsit the it will give a trace back
+return a handle use to manipulate the file
+the file name is a string 
+mode is Optional and should be 'r' if we are planning to read the file and 'w' if we are going to write to the file
+"""
+#\n --> it is not 2 character it is just a single character that move the thing next it to the next line n\ is resembled as 1 character in python not 2
+stuff = 'Hello\nWorld!'
+##Hello 
+##world
+print(stuff)
+stuff = 'X\nY;
+print(stuff)
+## x
+## Y
+len(stuff)
+## 3 
+# it is 3 cause X is a char and \n is a char and Y is a char and that is 3 characters not 4 
+
+
+#\n == newlines --> it is like the Enter Botton in windows it work exacty like it 
+# when print is excuted it will have a line after it 
+
+xfile = open('mbox.txt')
+for cheese in xfile:
+  print(cheese)
+
+# a file handle that is in this case 'xfile' open for read can be treated as a sequence of strings where each line in the file is a strings in the sequence
+# we can use thr for statement to iterate through a sequence 
+# remember a sequence is an ordered set
+
+fhand = open('mbox.txt')
+count = 0 
+for line in fhand:
+  count = count + 1 
+print('Line Count:', count)
+## LIne Count: 132045
+
+inp = fhand.read()
+# her we will read the whole thing the whole file(newlines & all) into a single string unlike the ubove it will gp through each line indivisually
+print(len(inp))
+## 94626 --> this is the character numbers 
+print(inp[:20])
+## From stephen.marquar
+# when we print we will se the newlines here it will read the whole things
+
+for line in fhand
